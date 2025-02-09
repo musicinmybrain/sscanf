@@ -134,6 +134,8 @@ try_silent cargo +stable fmt --check
 # sscanf_macro subdirectory
 ########
 cd "${BASE_DIR}/sscanf_macro"
+try_silent cargo +stable test
+try_silent cargo +nightly test
 try_silent cargo +nightly clippy -- -D warnings
 try_silent cargo +stable fmt --check
 
